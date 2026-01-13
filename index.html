@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parker Lemery - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">Parker Lemery</a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#resume">Resume</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Parker Lemery</span></h1>
+                <p class="hero-subtitle">Computer Science & Engineering Student | AI Specialist</p>
+                <p class="hero-description">Ohio State University student specializing in Artificial Intelligence, passionate about full-stack development and machine learning.</p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+                <div class="social-links">
+                    <a href="https://github.com/yourusername" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/parker-lemery" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:parkerlemery@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:8022388293"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a Computer Science & Engineering student at The Ohio State University with a 3.791 GPA, specializing in Artificial Intelligence. I have experience in full-stack development, machine learning, and iOS app development.</p>
+                    <p>Currently seeking software engineering internship opportunities where I can apply my expertise in Swift, Python, JavaScript, and AI technologies to build innovative solutions.</p>
+                    <div class="skills">
+                        <h3>Skills & Technologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Swift</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Java</span>
+                            <span class="skill-tag">SwiftUI</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">Express.js</span>
+                            <span class="skill-tag">React</span>
+                            <span class="skill-tag">OpenAI API</span>
+                            <span class="skill-tag">Vision Framework</span>
+                            <span class="skill-tag">PDFKit</span>
+                            <span class="skill-tag">AWS</span>
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">HTML/CSS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Academic Performance App">
+                    </div>
+                    <div class="project-content">
+                        <h3>Academic Performance App & Grade Tracker</h3>
+                        <p>Full-stack iOS app with AI-powered grade tracking and document parsing. Integrated OpenAI GPT-4o-mini for natural language processing and multi-modal document processing using Apple's Vision framework for OCR.</p>
+                        <div class="project-tags">
+                            <span>Swift</span>
+                            <span>SwiftUI</span>
+                            <span>Node.js</span>
+                            <span>Express.js</span>
+                            <span>OpenAI API</span>
+                            <span>Vision Framework</span>
+                            <span>PDFKit</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Wheelchair Assistive Device">
+                    </div>
+                    <div class="project-content">
+                        <h3>Wheelchair Assistive Device</h3>
+                        <p>Lead Engineer for an assistive device project designing a ratchet mechanism to reduce upper body strain and improve wheelchair propulsion efficiency. Directed mechanical design, prototyping, and testing for reliable real-world use.</p>
+                        <div class="project-tags">
+                            <span>Mechanical Design</span>
+                            <span>Prototyping</span>
+                            <span>Engineering</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Details</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/400x250" alt="Real Time Currency Converter">
+                    </div>
+                    <div class="project-content">
+                        <h3>Real Time Currency Converter</h3>
+                        <p>Built a real-time currency converter web application using JavaScript, HTML, and CSS with live exchange rate data from ExchangeRate API. Implemented asynchronous API calls with fetch() and async/await for responsive UI.</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>ExchangeRate API</span>
+                            <span>Async/Await</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume" class="resume">
+        <div class="container">
+            <h2 class="section-title">Resume</h2>
+            <div class="resume-content">
+                <a href="resume.pdf" class="btn btn-primary" download><i class="fas fa-download"></i> Download Resume (PDF)</a>
+                
+                <div class="resume-section">
+                    <h3><i class="fas fa-graduation-cap"></i> Education</h3>
+                    <div class="resume-item">
+                        <h4>Bachelor of Science in Computer Science & Engineering</h4>
+                        <p class="resume-meta">The Ohio State University, College of Engineering | Expected Graduation: April 2028</p>
+                        <p><strong>GPA:</strong> 3.791/4.0 | <strong>Dean's List:</strong> 3 Semesters</p>
+                        <p><strong>Specialization:</strong> Artificial Intelligence</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3><i class="fas fa-briefcase"></i> Experience</h3>
+                    <div class="resume-item">
+                        <h4>AI Trainer</h4>
+                        <p class="resume-meta">Outlier AI | Remote | May 2025 - Present</p>
+                        <ul>
+                            <li>Designed 200+ calculus problems to test four large language models, iteratively refining problem complexity and structure to achieve approximately 12.5% model failure rate</li>
+                            <li>Created custom evaluation rubrics categorizing errors as catastrophic failures, minor calculation mistakes, or formatting issues</li>
+                            <li>Analyzed failure patterns to identify weaknesses in AI mathematical reasoning and provide actionable feedback for model improvement</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h4>Lead Pizza Chef</h4>
+                        <p class="resume-meta">Cucina Antica | Shelburne, VT | June 2021 - August 2024</p>
+                        <ul>
+                            <li>Oversaw daily operations of the pizza kitchen, ensuring timely and high-quality preparation of a wide range of pizza offerings</li>
+                            <li>Led a team of 4 kitchen staff, delegating tasks and maintaining a collaborative and efficient work environment</li>
+                            <li>Trained 6 new staff for positions throughout the kitchen to maximize productivity</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h3><i class="fas fa-code"></i> Technical Skills</h3>
+                    <div class="resume-item">
+                        <p><strong>Professional Skills:</strong> Team Leadership, Collaboration, Communication, Time Management, Critical Thinking</p>
+                        <p><strong>Languages & Frameworks:</strong> Swift, Java, JavaScript, Python, MATLAB, HTML, SwiftUI, Node.js, Express.js, PDFKit, Vision</p>
+                        <p><strong>Tools & Platforms:</strong> Git, AWS, Render, Xcode, VS Code, Claude Code, OpenAI API, Canvas LMS API, REST APIs, JSON</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <p>I'm currently seeking internship opportunities. Feel free to reach out!</p>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:parkerlemery@gmail.com">parkerlemery@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:8022388293">(802) 238-8293</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Columbus, OH</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/parker-lemery" target="_blank">LinkedIn Profile</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/yourusername" target="_blank">GitHub Profile</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Parker Lemery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
