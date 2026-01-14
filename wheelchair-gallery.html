@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheelchair Assistive Device - Parker Lemery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-header {
+            padding: 120px 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .gallery-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .gallery-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .gallery-container {
+            padding: 60px 20px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            background: white;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Lightbox styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 20px;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+        }
+
+        .lightbox-next {
+            right: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Parker Lemery</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Gallery Header -->
+    <div class="gallery-header">
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+        <h1>Wheelchair Assistive Device</h1>
+        <p>Lead Engineer for an assistive device project designing a ratchet mechanism to reduce upper body strain and improve wheelchair propulsion efficiency. Directed mechanical design, prototyping, and testing for reliable real-world use.</p>
+    </div>
+
+    <!-- Gallery -->
+    <div class="gallery-container">
+        <div class="gallery-grid">
+            <div class="gallery-item" onclick="openLightbox(0)">
+                <img src="images/wheelchair/wheelchair-image-1.png" alt="Wheelchair Image 1">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(1)">
+                <img src="images/wheelchair/wheelchair-image-2.png" alt="Wheelchair Image 2">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(2)">
+                <img src="images/wheelchair/wheelchair-image-3.jpg" alt="Wheelchair Image 3">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(3)">
+                <img src="images/wheelchair/wheelchair-image-4.png" alt="Wheelchair Image 4">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(4)">
+                <img src="images/wheelchair/wheelchair-image-5.png" alt="Wheelchair Image 5">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(5)">
+                <img src="images/wheelchair/wheelchair-image-6.png" alt="Wheelchair Image 6">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(6)">
+                <img src="images/wheelchair/wheelchair-image-7.png" alt="Wheelchair Image 7">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(7)">
+                <img src="images/wheelchair/wheelchair-image-8.png" alt="Wheelchair Image 8">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(8)">
+                <img src="images/wheelchair/wheelchair-image-9.png" alt="Wheelchair Image 9">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(9)">
+                <img src="images/wheelchair/wheelchair-image-10.png" alt="Wheelchair Image 10">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(10)">
+                <img src="images/wheelchair/wheelchair-image-11.png" alt="Wheelchair Image 11">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(11)">
+                <img src="images/wheelchair/wheelchair-image-12.png" alt="Wheelchair Image 12">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(12)">
+                <img src="images/wheelchair/wheelchair-image-13.png" alt="Wheelchair Image 13">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(13)">
+                <img src="images/wheelchair/wheelchair-image-14.png" alt="Wheelchair Image 14">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(14)">
+                <img src="images/wheelchair/wheelchair-image-15.png" alt="Wheelchair Image 15">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(15)">
+                <img src="images/wheelchair/wheelchair-image-16.png" alt="Wheelchair Image 16">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(16)">
+                <img src="images/wheelchair/wheelchair-image-17.png" alt="Wheelchair Image 17">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(17)">
+                <img src="images/wheelchair/wheelchair-image-18.png" alt="Wheelchair Image 18">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(18)">
+                <img src="images/wheelchair/wheelchair-image-19.png" alt="Wheelchair Image 19">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(19)">
+                <img src="images/wheelchair/wheelchair-image-20.png" alt="Wheelchair Image 20">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(20)">
+                <img src="images/wheelchair/wheelchair-image-21.png" alt="Wheelchair Image 21">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(21)">
+                <img src="images/wheelchair/wheelchair-image-22.png" alt="Wheelchair Image 22">
+            </div>
+            <div class="gallery-item" onclick="openLightbox(22)">
+                <img src="images/wheelchair/wheelchair-image-23.png" alt="Wheelchair Image 23">
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation(); changeImage(-1)">&#10094;</button>
+        <img id="lightbox-img" src="" alt="">
+        <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation(); changeImage(1)">&#10095;</button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Parker Lemery. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const images = [
+            'images/wheelchair/wheelchair-image-1.png',
+            'images/wheelchair/wheelchair-image-2.png',
+            'images/wheelchair/wheelchair-image-3.jpg',
+            'images/wheelchair/wheelchair-image-4.png',
+            'images/wheelchair/wheelchair-image-5.png',
+            'images/wheelchair/wheelchair-image-6.png',
+            'images/wheelchair/wheelchair-image-7.png',
+            'images/wheelchair/wheelchair-image-8.png',
+            'images/wheelchair/wheelchair-image-9.png',
+            'images/wheelchair/wheelchair-image-10.png',
+            'images/wheelchair/wheelchair-image-11.png',
+            'images/wheelchair/wheelchair-image-12.png',
+            'images/wheelchair/wheelchair-image-13.png',
+            'images/wheelchair/wheelchair-image-14.png',
+            'images/wheelchair/wheelchair-image-15.png',
+            'images/wheelchair/wheelchair-image-16.png',
+            'images/wheelchair/wheelchair-image-17.png',
+            'images/wheelchair/wheelchair-image-18.png',
+            'images/wheelchair/wheelchair-image-19.png',
+            'images/wheelchair/wheelchair-image-20.png',
+            'images/wheelchair/wheelchair-image-21.png',
+            'images/wheelchair/wheelchair-image-22.png',
+            'images/wheelchair/wheelchair-image-23.png'
+        ];
+
+        let currentIndex = 0;
+
+        function openLightbox(index) {
+            currentIndex = index;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+            document.getElementById('lightbox').classList.add('active');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= images.length) currentIndex = 0;
+            document.getElementById('lightbox-img').src = images[currentIndex];
+        }
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (document.getElementById('lightbox').classList.contains('active')) {
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') changeImage(-1);
+                if (e.key === 'ArrowRight') changeImage(1);
+            }
+        });
+    </script>
+</body>
+</html>
