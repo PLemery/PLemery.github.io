@@ -1,79 +1,46 @@
-# Portfolio Website
+# Parker Lemery - Portfolio Website
 
-A modern, responsive portfolio website to showcase your projects, resume, and skills for internship applications.
+A modern, responsive portfolio website showcasing my projects, resume, and skills for software engineering internship applications.
+
+**Live Site:** https://plemery.github.io
 
 ## Features
 
 - **Responsive Design**: Works seamlessly on desktop, tablet, and mobile devices
 - **Modern UI**: Clean and professional design with smooth animations
-- **Easy to Customize**: Simple HTML/CSS/JS structure that's easy to modify
+- **Projects Showcase**: Three featured projects with live demos and source code
+- **Image Gallery**: Dedicated gallery page for wheelchair assistive device project (23 images)
 - **Sections Include**:
   - Hero section with introduction
-  - About section with skills
-  - Projects showcase
-  - Resume section
-  - Contact information
+  - About section with technical skills
+  - Projects showcase with working links
+  - Resume section with downloadable PDF
+  - Contact information with email, phone, and social links
 
-## Getting Started
+## Current Projects
 
-### 1. Customize Your Information
+### 1. Academic Performance App & Grade Tracker
+- Full-stack iOS app with AI-powered grade tracking
+- Tech: Swift, SwiftUI, Node.js, Express.js, OpenAI API, Vision Framework, PDFKit
+- Features natural language processing and OCR document parsing
 
-Edit `index.html` and update the following:
+### 2. Wheelchair Assistive Device
+- Lead Engineer role designing ratchet mechanism for wheelchair propulsion
+- 23 CAD images showcasing mechanical design and prototyping
+- View full gallery at `wheelchair-gallery.html`
 
-- **Personal Information**: Replace "Parker Lemery" with your name
-- **Social Links**: Update GitHub, LinkedIn, and email links (search for "yourusername" and "your.email@example.com")
-- **About Section**: Update the description and skills to match your background
-- **Projects**: Replace the placeholder projects with your own:
-  - Update project titles, descriptions, and technologies
-  - Add your project links (GitHub repos, live demos)
-  - Replace placeholder images (see below)
-- **Resume Section**: Fill in your education, experience, and achievements
-- **Contact Info**: Update all contact information
+### 3. Real Time Currency Converter
+- Web application with live exchange rates for 5 major currencies
+- Tech: JavaScript, HTML/CSS, ExchangeRate API
+- **Live Demo:** https://plemery.github.io/currency-converter/
+- **Source Code:** https://github.com/PLemery/currency-converter
 
-### 2. Add Your Resume PDF
+## Deployment
 
-- Export your resume as a PDF
-- Save it as `resume.pdf` in the portfolio-website folder
-- The download button will automatically link to it
-
-### 3. Add Project Images
-
-Replace the placeholder images with screenshots of your projects:
-
-- Create an `images` folder in the portfolio-website directory
-- Add your project screenshots (recommended size: 400x250px or similar aspect ratio)
-- Update the `<img src="...">` tags in index.html with your image paths
-
-Example:
-```html
-<img src="images/project1.png" alt="Project 1">
-```
-
-### 4. Preview Locally
-
-Open `index.html` in your web browser to preview your portfolio.
-
-## Deployment Options
-
-### Option 1: GitHub Pages (Free & Easy)
-
-1. Create a new GitHub repository
-2. Push your portfolio files to the repository
-3. Go to Settings > Pages
-4. Select your main branch as the source
-5. Your site will be live at `https://yourusername.github.io/repository-name`
-
-### Option 2: Netlify (Free)
-
-1. Sign up at [netlify.com](https://www.netlify.com/)
-2. Drag and drop your portfolio-website folder
-3. Your site will be live instantly with a custom URL
-
-### Option 3: Vercel (Free)
-
-1. Sign up at [vercel.com](https://vercel.com/)
-2. Import your GitHub repository or upload files
-3. Deploy with one click
+This portfolio is deployed using **GitHub Pages**:
+- **Repository:** https://github.com/PLemery/PLemery.github.io
+- **Live Site:** https://plemery.github.io
+- Automatically deploys when changes are pushed to the `main` branch
 
 ## Customization Tips
 
@@ -122,19 +89,27 @@ Copy and paste a project card in `index.html` and update the content:
 
 ```
 portfolio-website/
-├── index.html          # Main HTML file
-├── styles.css          # All styling
-├── script.js           # JavaScript for interactions
-├── resume.pdf          # Your resume (add this)
-├── images/             # Project images (create this folder)
-│   ├── project1.png
-│   ├── project2.png
-│   └── ...
-└── README.md          # This file
+├── index.html                    # Main portfolio page
+├── wheelchair-gallery.html       # Wheelchair project gallery
+├── styles.css                    # All styling
+├── script.js                     # JavaScript for interactions
+├── resume.pdf                    # Resume PDF (downloadable)
+├── images/
+│   └── wheelchair/               # Wheelchair project images (23 images)
+│       ├── wheelchair-image-1.png
+│       ├── wheelchair-image-2.png
+│       └── ...
+└── README.md                     # This file
 ```
 
-## Support
+## Contact
 
-If you need help customizing your portfolio, feel free to reach out or consult online resources for HTML/CSS basics.
+- **Email:** parkerlemery@gmail.com
+- **Phone:** (802) 238-8293
+- **LinkedIn:** https://www.linkedin.com/in/parker-lemery
+- **GitHub:** https://github.com/PLemery
+- **Location:** Columbus, OH
 
-Good luck with your internship applications! 🚀
+---
+
+© 2026 Parker Lemery. All rights reserved.
