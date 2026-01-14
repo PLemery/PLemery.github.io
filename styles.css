@@ -92,11 +92,15 @@ body {
 /* Hero Section */
 .hero {
     padding: 120px 20px 80px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('images/hero-background.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     color: white;
     min-height: 100vh;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 180px;
 }
 
 .hero-content {
@@ -109,10 +113,12 @@ body {
     font-size: 3rem;
     margin-bottom: 1rem;
     animation: fadeInUp 0.8s ease-out;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .highlight {
     color: #fbbf24;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-subtitle {
@@ -120,6 +126,7 @@ body {
     margin-bottom: 1rem;
     opacity: 0.95;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-description {
@@ -127,6 +134,7 @@ body {
     margin-bottom: 2rem;
     opacity: 0.9;
     animation: fadeInUp 0.8s ease-out 0.4s backwards;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
 }
 
 .hero-buttons {
