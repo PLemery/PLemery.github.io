@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Performance App - Parker Lemery</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .details-header {
+            padding: 120px 20px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .details-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .details-header p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: transform 0.3s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+
+        .details-container {
+            padding: 60px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+
+        .section h3 {
+            color: #555;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+
+        .section p, .section li {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .section ul {
+            margin-left: 25px;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+
+        .tech-badge {
+            background: #667eea;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .feature-card {
+            background: #f8f9ff;
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+
+        .feature-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+
+        .feature-card p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Parker Lemery</a>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="index.html#resume">Resume</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Details Header -->
+    <div class="details-header">
+        <a href="index.html#projects" class="back-link">
+            <i class="fas fa-arrow-left"></i> Back to Projects
+        </a>
+        <h1>Academic Performance App & Grade Tracker</h1>
+        <p>An AI-powered iOS application designed to help students optimize their academic performance through intelligent grade tracking, predictive analytics, and syllabus parsing.</p>
+    </div>
+
+    <!-- Details Content -->
+    <div class="details-container">
+        <!-- Overview Section -->
+        <div class="section">
+            <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
+            <p>The Academic Performance App is a comprehensive full-stack iOS application that combines Swift/SwiftUI frontend with a Node.js/Express.js backend, integrating OpenAI's GPT-4o-mini for intelligent features. The app helps students track grades, simulate "what-if" scenarios, and optimize their academic performance through AI-powered insights.</p>
+            <p>Built from July 2025 to present, this project demonstrates advanced mobile development skills, API integration, natural language processing, and real-world problem-solving for academic optimization.</p>
+        </div>
+
+        <!-- Key Features Section -->
+        <div class="section">
+            <h2><i class="fas fa-star"></i> Key Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4><i class="fas fa-file-pdf"></i> AI Syllabus Parsing</h4>
+                    <p>Upload syllabi (PDF/images) and use Apple's Vision framework with OpenAI GPT-4o-mini to extract course structure, assignments, and grading breakdowns automatically.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-chart-line"></i> Grade Tracking & Analytics</h4>
+                    <p>Track assignments and grades across multiple courses with real-time GPA calculation and visual performance analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-calculator"></i> What-If Grade Simulator</h4>
+                    <p>Run predictive scenarios to see how different assignment scores affect your final grade, helping prioritize study efforts.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-sync"></i> Canvas LMS Integration</h4>
+                    <p>Connect directly to Canvas LMS to automatically sync course data, assignments, and grades.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-brain"></i> Natural Language Processing</h4>
+                    <p>Chat with GPT-4o-mini to ask questions about your grades, get study recommendations, and receive personalized academic insights.</p>
+                </div>
+                <div class="feature-card">
+                    <h4><i class="fas fa-chart-pie"></i> Effort Analysis</h4>
+                    <p>Identify which assignments have the biggest impact on your final grade to optimize time allocation.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Implementation Section -->
+        <div class="section">
+            <h2><i class="fas fa-code"></i> Technical Implementation</h2>
+            
+            <h3>Frontend (iOS)</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Swift</span>
+                <span class="tech-badge">SwiftUI</span>
+                <span class="tech-badge">Core Data</span>
+                <span class="tech-badge">Vision Framework</span>
+                <span class="tech-badge">PDFKit</span>
+            </div>
+            <ul>
+                <li><strong>SwiftUI Architecture:</strong> Modern declarative UI with custom components and reusable views</li>
+                <li><strong>Core Data:</strong> Local persistence for courses, assignments, and user preferences</li>
+                <li><strong>Document Processing:</strong> Integrated Vision framework for OCR and PDFKit for document parsing</li>
+                <li><strong>API Communication:</strong> RESTful API calls to backend server with async/await patterns</li>
+            </ul>
+
+            <h3>Backend (Node.js)</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">Node.js</span>
+                <span class="tech-badge">Express.js</span>
+                <span class="tech-badge">OpenAI API</span>
+                <span class="tech-badge">Canvas LMS API</span>
+                <span class="tech-badge">REST Architecture</span>
+            </div>
+            <ul>
+                <li><strong>Express.js Server:</strong> RESTful API endpoints for syllabus parsing, grade analysis, and chat functionality</li>
+                <li><strong>OpenAI Integration:</strong> GPT-4o-mini for intelligent syllabus parsing, structured data extraction, and conversational AI</li>
+                <li><strong>Canvas API:</strong> OAuth integration to fetch course data, assignments, and grades automatically</li>
+                <li><strong>Prompt Engineering:</strong> Custom prompts for accurate syllabus parsing and multi-modal document processing</li>
+            </ul>
+
+            <h3>Deployment</h3>
+            <div class="tech-stack">
+                <span class="tech-badge">AWS</span>
+                <span class="tech-badge">Render</span>
+                <span class="tech-badge">TestFlight</span>
+            </div>
+            <ul>
+                <li><strong>Cloud Hosting:</strong> Backend deployed on Render with environment variable management</li>
+                <li><strong>iOS Distribution:</strong> Beta testing via TestFlight for continuous user feedback</li>
+                <li><strong>Secure API:</strong> Proxy architecture to protect API keys and ensure secure communication</li>
+            </ul>
+        </div>
+
+        <!-- How It Works Section -->
+        <div class="section">
+            <h2><i class="fas fa-cogs"></i> How It Works</h2>
+            
+            <h3>1. Syllabus Upload & Parsing</h3>
+            <p>Students upload their course syllabus as a PDF or image. The app uses Apple's Vision framework to extract text via OCR, then sends the content to the backend server. OpenAI's GPT-4o-mini processes the syllabus to extract:</p>
+            <ul>
+                <li>Course name and instructor information</li>
+                <li>Grading breakdown (e.g., Exams 40%, Homework 30%, Projects 30%)</li>
+                <li>Individual assignments with due dates and point values</li>
+                <li>Custom grading scales (A = 93-100, B = 85-92, etc.)</li>
+            </ul>
+
+            <h3>2. Grade Tracking</h3>
+            <p>Once the course structure is imported, students can:</p>
+            <ul>
+                <li>Enter assignment scores as they receive grades</li>
+                <li>View real-time calculation of current grade and GPA</li>
+                <li>See visual breakdowns of performance by category</li>
+                <li>Track progress across multiple courses in one dashboard</li>
+            </ul>
+
+            <h3>3. Predictive Simulation</h3>
+            <p>The "What-If" simulator allows students to:</p>
+            <ul>
+                <li>Enter hypothetical scores for upcoming assignments</li>
+                <li>See how different scenarios impact their final grade</li>
+                <li>Identify minimum scores needed to achieve target grades</li>
+                <li>Make informed decisions about study time allocation</li>
+            </ul>
+
+            <h3>4. Canvas Integration</h3>
+            <p>Students can optionally connect their Canvas LMS account to:</p>
+            <ul>
+                <li>Automatically import course lists and syllabi</li>
+                <li>Sync assignment due dates and descriptions</li>
+                <li>Pull grades directly from Canvas gradebook</li>
+                <li>Keep everything up-to-date without manual entry</li>
+            </ul>
+        </div>
+
+        <!-- Challenges & Solutions Section -->
+        <div class="section">
+            <h2><i class="fas fa-lightbulb"></i> Challenges & Solutions</h2>
+            
+            <h3>Challenge 1: Accurate Syllabus Parsing</h3>
+            <p><strong>Problem:</strong> Syllabi come in various formats with inconsistent structures, making it difficult to extract data reliably.</p>
+            <p><strong>Solution:</strong> Developed custom prompt engineering strategies for GPT-4o-mini, providing specific JSON schemas for structured output. Combined OCR with multi-modal processing to handle both text-based PDFs and scanned images.</p>
+
+            <h3>Challenge 2: Real-Time Grade Calculations</h3>
+            <p><strong>Problem:</strong> Complex grading schemes with weighted categories, dropped scores, and custom curves require sophisticated calculation logic.</p>
+            <p><strong>Solution:</strong> Built a flexible GradeCalculator utility that handles various grading scenarios, including percentage-based and point-based systems, with support for dropping lowest scores.</p>
+
+            <h3>Challenge 3: API Security</h3>
+            <p><strong>Problem:</strong> Storing OpenAI API keys directly in iOS app would expose them in the app binary.</p>
+            <p><strong>Solution:</strong> Implemented a secure proxy architecture where the iOS app calls a backend server, which handles all OpenAI API communication with environment-protected keys.</p>
+        </div>
+
+        <!-- Impact & Results Section -->
+        <div class="section">
+            <h2><i class="fas fa-trophy"></i> Impact & Results</h2>
+            <ul>
+                <li><strong>Active Development:</strong> Continuously improving based on user feedback and adding new features</li>
+                <li><strong>Real-World Testing:</strong> Used by students at The Ohio State University for real course tracking</li>
+                <li><strong>Technical Growth:</strong> Gained expertise in iOS development, API integration, AI/ML, and full-stack architecture</li>
+                <li><strong>Problem-Solving:</strong> Created a practical solution that addresses a real need for students managing multiple courses</li>
+            </ul>
+        </div>
+
+        <!-- Future Enhancements Section -->
+        <div class="section">
+            <h2><i class="fas fa-rocket"></i> Future Enhancements</h2>
+            <ul>
+                <li>Study schedule recommendations based on assignment deadlines and grade priorities</li>
+                <li>Integration with additional LMS platforms (Blackboard, Moodle, etc.)</li>
+                <li>Collaborative features for study groups and course comparison</li>
+                <li>Advanced analytics and trend visualization over multiple semesters</li>
+                <li>Machine learning models for personalized study recommendations</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Parker Lemery. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
