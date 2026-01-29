@@ -215,13 +215,15 @@ section {
 
 .about-image {
     width: 100%;
-    max-width: 300px;
+    max-width: 150px;
+    margin: 0 auto;
 }
 
 .headshot {
     width: 100%;
     border-radius: 12px;
     box-shadow: var(--shadow-lg);
+    display: block;
 }
 
 .about-text {
