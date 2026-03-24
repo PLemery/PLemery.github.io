@@ -146,7 +146,7 @@
         <div class="section">
             <h2><i class="fas fa-info-circle"></i> Project Overview</h2>
             <p>The Academic Performance App is a comprehensive full-stack iOS application that combines Swift/SwiftUI frontend with a Node.js/Express.js backend, integrating OpenAI's GPT-4o-mini for intelligent features. The app helps students track grades, simulate "what-if" scenarios, and optimize their academic performance through AI-powered insights.</p>
-            <p>Started in July 2025 and still actively developing, this project demonstrates advanced mobile development skills, API integration, natural language processing, and real-world problem-solving for academic optimization.</p>
+            <p>Started in July 2025 and still actively developing, this project demonstrates full-stack iOS development, cloud architecture, third-party API integration, and practical problem-solving for students managing multiple courses.</p>
         </div>
 
         <!-- Key Features Section -->
@@ -155,27 +155,27 @@
             <div class="feature-grid">
                 <div class="feature-card">
                     <h4><i class="fas fa-file-pdf"></i> AI Syllabus Parsing</h4>
-                    <p>Upload syllabi (PDF/images) and use Apple's Vision framework with OpenAI GPT-4o-mini to extract course structure, assignments, and grading breakdowns automatically.</p>
+                    <p>Upload a PDF syllabus and GPT-4o-mini automatically extracts the course name, professor, semester, assignments, weights, due dates, and grading policy — ready to review and import.</p>
                 </div>
                 <div class="feature-card">
-                    <h4><i class="fas fa-chart-line"></i> Grade Tracking & Analytics</h4>
-                    <p>Track assignments and grades across multiple courses with real-time GPA calculation and visual performance analytics.</p>
+                    <h4><i class="fas fa-chart-line"></i> Grade Tracking</h4>
+                    <p>Manually track assignments across multiple courses using weighted category calculation. Enter scores as percentages or fractions, with customizable grading scales including a built-in Ohio State scale.</p>
                 </div>
                 <div class="feature-card">
-                    <h4><i class="fas fa-calculator"></i> What-If Grade Simulator</h4>
-                    <p>Run predictive scenarios to see how different assignment scores affect your final grade, helping prioritize study efforts.</p>
+                    <h4><i class="fas fa-calculator"></i> Grade Simulation & GPA Impact</h4>
+                    <p>Target grade slider shows exactly what score you need on remaining work. Scenario simulator runs Perfect / Excellent / Good / Average / Minimum projections, and a GPA impact calculator projects your GPA after the course.</p>
                 </div>
                 <div class="feature-card">
                     <h4><i class="fas fa-sync"></i> Canvas LMS Integration</h4>
-                    <p>Connect directly to Canvas LMS to automatically sync course data, assignments, and grades.</p>
+                    <p>Connect a Canvas API token to sync grades automatically. Supports any institution via a searchable university picker, with 5-level fuzzy matching to map Canvas courses to app courses and auto-creation of recurring assignments.</p>
                 </div>
                 <div class="feature-card">
-                    <h4><i class="fas fa-brain"></i> Natural Language Processing</h4>
-                    <p>Chat with GPT-4o-mini to ask questions about your grades, get study recommendations, and receive personalized academic insights.</p>
+                    <h4><i class="fas fa-user-lock"></i> Authentication & Cloud Sync</h4>
+                    <p>Email/password and Google OAuth sign-in via Supabase. All data stored in PostgreSQL with Row Level Security so each user only accesses their own data, with full multi-device sync.</p>
                 </div>
                 <div class="feature-card">
                     <h4><i class="fas fa-chart-pie"></i> Effort Analysis</h4>
-                    <p>Identify which assignments have the biggest impact on your final grade to optimize time allocation.</p>
+                    <p>Ranks incomplete assignments by grade impact and surfaces a grade recovery card highlighting the highest-impact work to focus on based on your current standing.</p>
                 </div>
             </div>
         </div>
@@ -188,42 +188,43 @@
             <div class="tech-stack">
                 <span class="tech-badge">Swift</span>
                 <span class="tech-badge">SwiftUI</span>
-                <span class="tech-badge">Core Data</span>
                 <span class="tech-badge">Vision Framework</span>
                 <span class="tech-badge">PDFKit</span>
+                <span class="tech-badge">Keychain</span>
             </div>
             <ul>
                 <li><strong>SwiftUI Architecture:</strong> Modern declarative UI with custom components and reusable views</li>
-                <li><strong>Core Data:</strong> Local persistence for courses, assignments, and user preferences</li>
-                <li><strong>Document Processing:</strong> Integrated Vision framework for OCR and PDFKit for document parsing</li>
-                <li><strong>API Communication:</strong> RESTful API calls to backend server with async/await patterns</li>
+                <li><strong>Document Processing:</strong> Vision framework for OCR and PDFKit for PDF text extraction, feeding content to GPT-4o-mini for structured parsing</li>
+                <li><strong>Secure Storage:</strong> Canvas API tokens stored encrypted in Keychain, never in plaintext</li>
+                <li><strong>API Communication:</strong> Async/await throughout for non-blocking API calls to backend and Supabase</li>
             </ul>
 
-            <h3>Backend (Node.js)</h3>
+            <h3>Backend & Cloud</h3>
             <div class="tech-stack">
                 <span class="tech-badge">Node.js</span>
                 <span class="tech-badge">Express.js</span>
+                <span class="tech-badge">Supabase (PostgreSQL)</span>
+                <span class="tech-badge">Supabase Auth</span>
                 <span class="tech-badge">OpenAI API</span>
                 <span class="tech-badge">Canvas LMS API</span>
-                <span class="tech-badge">REST Architecture</span>
             </div>
             <ul>
-                <li><strong>Express.js Server:</strong> RESTful API endpoints for syllabus parsing, grade analysis, and chat functionality</li>
-                <li><strong>OpenAI Integration:</strong> GPT-4o-mini for intelligent syllabus parsing, structured data extraction, and conversational AI</li>
-                <li><strong>Canvas API:</strong> OAuth integration to fetch course data, assignments, and grades automatically</li>
-                <li><strong>Prompt Engineering:</strong> Custom prompts for accurate syllabus parsing and multi-modal document processing</li>
+                <li><strong>Supabase:</strong> PostgreSQL database for all course and assignment data, with Row Level Security ensuring users can only access their own records</li>
+                <li><strong>Authentication:</strong> Email/password and Google OAuth handled by Supabase Auth, with automatic user settings creation on signup via a database trigger</li>
+                <li><strong>Express.js Proxy:</strong> Backend server proxies all OpenAI API calls so the API key is never shipped inside the app binary</li>
+                <li><strong>Canvas Integration:</strong> Token-based Canvas REST API calls with a 5-level fuzzy matching algorithm to map Canvas courses to app courses across different naming formats</li>
             </ul>
 
             <h3>Deployment</h3>
             <div class="tech-stack">
-                <span class="tech-badge">AWS</span>
                 <span class="tech-badge">Render</span>
+                <span class="tech-badge">Supabase Cloud</span>
                 <span class="tech-badge">TestFlight</span>
             </div>
             <ul>
-                <li><strong>Cloud Hosting:</strong> Backend deployed on Render with environment variable management</li>
+                <li><strong>Backend Hosting:</strong> Express proxy server deployed on Render with environment-protected API keys</li>
+                <li><strong>Database:</strong> Supabase hosted PostgreSQL with automatic backups and RLS-enforced access control</li>
                 <li><strong>iOS Distribution:</strong> Beta testing via TestFlight for continuous user feedback</li>
-                <li><strong>Secure API:</strong> Proxy architecture to protect API keys and ensure secure communication</li>
             </ul>
         </div>
 
@@ -231,41 +232,27 @@
         <div class="section">
             <h2><i class="fas fa-cogs"></i> How It Works</h2>
             
-            <h3>1. Syllabus Upload & Parsing</h3>
-            <p>Students upload their course syllabus as a PDF or image. The app uses Apple's Vision framework to extract text via OCR, then sends the content to the backend server. OpenAI's GPT-4o-mini processes the syllabus to extract:</p>
+            <h3>1. Sign In & Cloud Sync</h3>
+            <p>Users create an account with email/password or Google OAuth. On login, all courses, assignments, and settings sync instantly from Supabase. Every change made in the app is persisted to the cloud in the background, so data is always available across devices and never lost.</p>
+
+            <h3>2. Syllabus Upload & Parsing</h3>
+            <p>Students upload a PDF syllabus from their device. The app uses PDFKit to extract the text, then sends it to the Express backend which calls GPT-4o-mini with a structured prompt. The AI returns a JSON object containing:</p>
             <ul>
-                <li>Course name and instructor information</li>
-                <li>Grading breakdown (e.g., Exams 40%, Homework 30%, Projects 30%)</li>
+                <li>Course name, code, professor, and semester</li>
+                <li>Grading category weights (e.g., Exams 40%, Homework 30%)</li>
                 <li>Individual assignments with due dates and point values</li>
-                <li>Custom grading scales (A = 93-100, B = 85-92, etc.)</li>
+                <li>Custom grading scale (A = 93-100, etc.)</li>
             </ul>
+            <p>The extracted data is shown for review before import, so students can selectively accept or reject items.</p>
 
-            <h3>2. Grade Tracking</h3>
-            <p>Once the course structure is imported, students can:</p>
-            <ul>
-                <li>Enter assignment scores as they receive grades</li>
-                <li>View real-time calculation of current grade and GPA</li>
-                <li>See visual breakdowns of performance by category</li>
-                <li>Track progress across multiple courses in one dashboard</li>
-            </ul>
+            <h3>3. Grade Tracking</h3>
+            <p>Once courses are set up — either via syllabus import, Canvas sync, or manually — students enter scores as they receive them. Scores can be entered as percentages or fractions (e.g., 45/56). The app calculates the current weighted grade and projected final grade in real time using the category weights defined for that course.</p>
 
-            <h3>3. Predictive Simulation</h3>
-            <p>The "What-If" simulator allows students to:</p>
-            <ul>
-                <li>Enter hypothetical scores for upcoming assignments</li>
-                <li>See how different scenarios impact their final grade</li>
-                <li>Identify minimum scores needed to achieve target grades</li>
-                <li>Make informed decisions about study time allocation</li>
-            </ul>
+            <h3>4. Grade Simulation & Effort Analysis</h3>
+            <p>The simulator tab lets students set a target grade and instantly see what score they need on remaining assignments. The scenario runner projects final grades across five effort levels (Perfect through Minimum), and the GPA impact calculator shows how the projected final grade will affect their overall GPA. The effort analysis tab ranks incomplete assignments by their grade impact and surfaces a grade recovery card highlighting the highest-value work to prioritize.</p>
 
-            <h3>4. Canvas Integration</h3>
-            <p>Students can optionally connect their Canvas LMS account to:</p>
-            <ul>
-                <li>Automatically import course lists and syllabi</li>
-                <li>Sync assignment due dates and descriptions</li>
-                <li>Pull grades directly from Canvas gradebook</li>
-                <li>Keep everything up-to-date without manual entry</li>
-            </ul>
+            <h3>5. Canvas Integration</h3>
+            <p>Students paste their Canvas API token in Settings and select their university from a searchable picker (supports any Canvas institution). The app pulls all enrolled courses and their grades via the Canvas REST API. A 5-level fuzzy matching algorithm maps Canvas courses to existing app courses by name, code, and other signals, then auto-creates recurring assignment categories like Homework, Lab, and Participation where applicable.</p>
         </div>
 
         <!-- Challenges & Solutions Section -->
@@ -280,9 +267,13 @@
             <p><strong>Problem:</strong> Complex grading schemes with weighted categories, dropped scores, and custom curves require sophisticated calculation logic.</p>
             <p><strong>Solution:</strong> Built a flexible GradeCalculator utility that handles various grading scenarios, including percentage-based and point-based systems, with support for dropping lowest scores.</p>
 
-            <h3>Challenge 3: API Security</h3>
-            <p><strong>Problem:</strong> Storing OpenAI API keys directly in iOS app would expose them in the app binary.</p>
-            <p><strong>Solution:</strong> Implemented a secure proxy architecture where the iOS app calls a backend server, which handles all OpenAI API communication with environment-protected keys.</p>
+            <h3>Challenge 3: Canvas Course Matching</h3>
+            <p><strong>Problem:</strong> Canvas course names rarely match what a student calls their course in the app — a course might be "CSE 2221.100" in Canvas but "Software I" locally.</p>
+            <p><strong>Solution:</strong> Built a 5-level fuzzy matching algorithm that compares course names, codes, and partial strings in priority order, falling back to progressively looser matches to maximize auto-mapping accuracy.</p>
+
+            <h3>Challenge 4: API Security</h3>
+            <p><strong>Problem:</strong> Storing OpenAI API keys directly in the iOS app would expose them in the app binary.</p>
+            <p><strong>Solution:</strong> Implemented a secure proxy architecture where the iOS app calls a Node.js/Express backend, which handles all OpenAI API communication with environment-protected keys. Canvas tokens are stored in Keychain on-device, never in plaintext.</p>
         </div>
 
         <!-- Impact & Results Section -->
